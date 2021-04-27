@@ -8,7 +8,7 @@ const { app, BrowserWindow } = require('electron')
 
 const debug = /--debug/.test(process.argv[2])
 
-if (process.mas) app.setName('Electron Demo')
+if (process.mas) app.setName('Electron APIs')
 
 let mainWindow = null
 
@@ -24,7 +24,6 @@ function initialize() {
       height: 840,
       title: app.getName(),
       webPreferences: {
-        contextIsolation: false,
         nodeIntegration: true
       }
     }
