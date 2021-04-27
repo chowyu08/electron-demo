@@ -1,9 +1,10 @@
 const { ipcRenderer } = require('electron')
 
-const syncMsgBtn = document.getElementById('sync-msg')
+const queryMsgBtn = document.getElementById('mysql-query')
 
-syncMsgBtn.addEventListener('click', () => {
-    const reply = ipcRenderer.sendSync('synchronous-message', 'ping')
-    const message = `Synchronous message reply: ${reply}`
-    document.getElementById('sync-reply').innerHTML = message
+queryMsgBtn.addEventListener('click', () => {
+    console.log('-----')
+    const reply = ipcRenderer.sendSync('mysql-query-message', 'query')
+    const message = `mysql-query message reply: ${reply}`
+    document.getElementById('mysql-query-reply').innerHTML = message
 })
