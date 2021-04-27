@@ -10,7 +10,7 @@ document.body.addEventListener('click', (event) => {
   }
 })
 
-function handleSectionTrigger (event) {
+function handleSectionTrigger(event) {
   hideAllSectionsAndDeselectButtons()
 
   // Highlight clicked button and show view
@@ -25,22 +25,22 @@ function handleSectionTrigger (event) {
   settings.set('activeSectionButtonId', buttonId)
 }
 
-function activateDefaultSection () {
+function activateDefaultSection() {
   document.getElementById('button-windows').click()
 }
 
-function showMainContent () {
+function showMainContent() {
   document.querySelector('.js-nav').classList.add('is-shown')
   document.querySelector('.js-content').classList.add('is-shown')
 }
 
-function handleModalTrigger (event) {
+function handleModalTrigger(event) {
   hideAllModals()
   const modalId = `${event.target.dataset.modal}-modal`
   document.getElementById(modalId).classList.add('is-shown')
 }
 
-function hideAllModals () {
+function hideAllModals() {
   const modals = document.querySelectorAll('.modal.is-shown')
   Array.prototype.forEach.call(modals, (modal) => {
     modal.classList.remove('is-shown')
@@ -48,7 +48,7 @@ function hideAllModals () {
   showMainContent()
 }
 
-function hideAllSectionsAndDeselectButtons () {
+function hideAllSectionsAndDeselectButtons() {
   const sections = document.querySelectorAll('.js-section.is-shown')
   Array.prototype.forEach.call(sections, (section) => {
     section.classList.remove('is-shown')
@@ -60,7 +60,7 @@ function hideAllSectionsAndDeselectButtons () {
   })
 }
 
-function displayAbout () {
+function displayAbout() {
   document.querySelector('#about-modal').classList.add('is-shown')
 }
 

@@ -56,6 +56,7 @@
     "electron-shortcut-normalizer": "^1.0.0",
     "glob": "^7.1.0",
     "highlight.js": "^10.4.1",
+    "mssql": "^6.3.1",
     "update-electron-app": "^1.1.1"
   },
   "standard": {
